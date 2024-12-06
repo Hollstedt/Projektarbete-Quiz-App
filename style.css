@@ -10,12 +10,50 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #ececec;
+  background-color: #f0f0f0;
   gap: 20px;
 }
 body.dark-mode {
-  background-color: black;
+  background-color: rgb(43, 43, 43);
 }
-body img {
-  height: 35px;
+
+.phone {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 400px;
+  height: 800px;
+  background-color: rgb(119, 119, 119);
+  border: 20px solid rgb(0, 0, 0);
+  border-radius: 30px;
+}
+.phone .status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(140, 140, 140);
+  padding: 0 10px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+.phone .status-bar img {
+  height: 30px;
+  position: absolute;
+  right: 7.5px;
+  top: 5px;
+}
+.phone .status-bar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.phone .top-and-bottom-screen-container {
+  height: 100%;
+}
+.phone .top-and-bottom-screen-container .top-half,
+.phone .top-and-bottom-screen-container .bottom-half {
+  height: 50%;
+  padding: 15px;
 }/*# sourceMappingURL=style.css.map */

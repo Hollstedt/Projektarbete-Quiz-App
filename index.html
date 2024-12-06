@@ -8,11 +8,22 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <button class="light-dark-mode"><img src="/icons/dark-mode.png" alt="picture of a moon, left side is white and right side is black"></button>
-    <h2 class="quiz-header">Fråga nummer <span class="question-number"></span></h2>
-    <p class="question">Question box</p>
-    <p class="score">Score box</p>
-    <button class="true-btn">Sant</button>
-    <button class="false-btn">Falskt</button>
+    <div class="phone">
+        <div class="status-bar">
+            <div class="time"></div>
+            <button class="light-dark-mode"><img src="/icons/dark-mode.png" alt="picture of a moon, left side is white and right side is black"></button>
+        </div>
+        <div class="top-and-bottom-screen-container">
+            <div class="top-half">
+                <h2 class="quiz-header">Fråga nummer <span class="question-number"></span> av <span class="max-questions"></span></h2>
+                <p class="question">Question box</p>
+                <p class="score">Score box</p>
+            </div>
+            <div class="bottom-half">
+                <button class="true-btn">Sant</button>
+                <button class="false-btn">Falskt</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
