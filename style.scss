@@ -16,7 +16,16 @@ body {
     gap: 20px;
 
     &.dark-mode {
-        background-color: rgb(43, 43, 43);
+        background-color: $background-dark;
+
+        .phone {
+            background-color: $background-light;
+        }
+
+        .status-bar {
+            background-color: $status-bar-dark;
+            color: $button-color-light;
+        }
     }
 }
 
@@ -26,7 +35,7 @@ body {
     flex-direction: column;
     width: 400px;
     height: 800px;
-    background-color: rgb(119, 119, 119);
+    background-color: $background-light;
     border: 20px solid rgb(0, 0, 0);
     border-radius: 30px;
     
@@ -36,9 +45,9 @@ body {
         align-items: center;
         height: 40px;
         width: 100%;
-        background-color: rgb(140, 140, 140);
+        background-color: $status-bar-light;
         padding: 0 10px;
-        border-radius: 10px 10px 0 0;
+        border-radius: 8px 8px 0 0;
         position: relative;
         
         img {
@@ -62,6 +71,74 @@ body {
         .bottom-half {
             height: 50%;
             padding: 15px;
+        }
+
+        .top-half {
+            background-color: inherit;
+        }
+
+        .bottom-half {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: inherit;
+
+            .true-false-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    display: none;
+                    width: 70%;
+                    height: 50px;
+                    border-radius: 15px;
+                    border: none;
+                    color: whitesmoke;
+                }
+    
+                .true-btn {
+                    background-color: #6D9952;
+                    margin-bottom: 15px;
+    
+                    &:hover {
+                        background-color: #6d9952bb;
+                    }
+                }
+    
+                .false-btn {
+                    background-color: #CB354E;
+    
+                    &:hover {
+                        background-color: #cb354ebb;
+                    }
+                }
+            }
+
+            .multiple-choices-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                button {
+                    display: none;
+                    width: 70%;
+                    height: 50px;
+                    border-radius: 15px;
+                    border: none;
+                    color: black;
+                    margin-bottom: 5px;
+
+                    &:hover {
+                        background-color: #333;
+                    }
+                }
+            }
         }
     }
 }

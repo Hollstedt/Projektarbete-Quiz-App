@@ -14,7 +14,14 @@ body {
   gap: 20px;
 }
 body.dark-mode {
-  background-color: rgb(43, 43, 43);
+  background-color: #333;
+}
+body.dark-mode .phone {
+  background-color: #f0f0f0;
+}
+body.dark-mode .status-bar {
+  background-color: #3b3b3b;
+  color: #fff;
 }
 
 .phone {
@@ -23,7 +30,7 @@ body.dark-mode {
   flex-direction: column;
   width: 400px;
   height: 800px;
-  background-color: rgb(119, 119, 119);
+  background-color: #f0f0f0;
   border: 20px solid rgb(0, 0, 0);
   border-radius: 30px;
 }
@@ -33,9 +40,9 @@ body.dark-mode {
   align-items: center;
   height: 40px;
   width: 100%;
-  background-color: rgb(140, 140, 140);
+  background-color: #b9b9b9;
   padding: 0 10px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
   position: relative;
 }
 .phone .status-bar img {
@@ -56,4 +63,61 @@ body.dark-mode {
 .phone .top-and-bottom-screen-container .bottom-half {
   height: 50%;
   padding: 15px;
+}
+.phone .top-and-bottom-screen-container .top-half {
+  background-color: inherit;
+}
+.phone .top-and-bottom-screen-container .bottom-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: inherit;
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container button {
+  display: none;
+  width: 70%;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: whitesmoke;
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container .true-btn {
+  background-color: #6D9952;
+  margin-bottom: 15px;
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container .true-btn:hover {
+  background-color: rgba(109, 153, 82, 0.7333333333);
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container .false-btn {
+  background-color: #CB354E;
+}
+.phone .top-and-bottom-screen-container .bottom-half .true-false-container .false-btn:hover {
+  background-color: rgba(203, 53, 78, 0.7333333333);
+}
+.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container button {
+  display: none;
+  width: 70%;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  margin-bottom: 5px;
+}
+.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container button:hover {
+  background-color: #333;
 }/*# sourceMappingURL=style.css.map */
