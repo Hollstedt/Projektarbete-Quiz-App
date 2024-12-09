@@ -12,45 +12,48 @@ document.querySelector('.time').textContent = time;
 // en array med objekt för fråga och svar
 let questions = [
     {
+        type: "true-false",
         text: "Den här frågan är true",
         answer: true
     },
     {
-        text: "Den här frågan är false",
-        answer: false
+        type: "multiple-choices",
+        text: "Är den här frågan sann?",
+        choices: ["Ja", "Nej", "Jag vet inte", "Kanske"],
+        answer: "Ja"
     },
-    {
-        text: "Den här frågan är true",
-        answer: true
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
-    {
-        text: "Den här frågan är false",
-        answer: false
-    },
+    // {
+    //     text: "Den här frågan är true",
+    //     answer: true
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
+    // {
+    //     text: "Den här frågan är false",
+    //     answer: false
+    // },
 ]
 
 // räknare för poäng
@@ -72,6 +75,16 @@ function showQuestion() {
         console.log("nu är du i if på showQuestion");
         document.querySelector('.question-number').textContent = questionIndex + 1;
         document.querySelector('.question').textContent = questions[questionIndex].text;
+
+        if (questions[questionIndex].type === "multiple-choices") {
+            document.querySelectorAll('.true-false-container').forEach(button => {
+                button.style.display = "none";
+            });
+            document.querySelectorAll('.multiple-choices-container').forEach(button => {
+                button.style.display = "block";
+                console.log("hamnar jag här?");
+            });
+        }
     } else {
         console.log("nu är du i else på showQuestion");
         document.querySelector('.quiz-header').textContent = "Nu är det slut på frågor!";
