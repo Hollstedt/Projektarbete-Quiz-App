@@ -27,6 +27,30 @@ let questions = [
         text: "Den här frågan är false",
         answer: false
     },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
+    {
+        text: "Den här frågan är false",
+        answer: false
+    },
 ]
 
 // räknare för poäng
@@ -39,7 +63,7 @@ let questionIndex = 0;
 document.querySelector('.max-questions').textContent = questions.length;
 
 
-// kollar om det finns frågor att visa och ändrar DOM baserat på cond
+// kollar om det finns frågor att visa och ändrar DOM baserat på conditional
 function showQuestion() {
     let phoneScreen = document.querySelector('.phone');
     let scorePercentage = (score / questions.length) * 100;
@@ -53,6 +77,7 @@ function showQuestion() {
         document.querySelector('.quiz-header').textContent = "Nu är det slut på frågor!";
         document.querySelector('.question').textContent = "";
         document.querySelector('.bottom-half').style.display = "none";
+        document.querySelector('.score').style.display = "block";
         
         console.log(scorePercentage);
 
@@ -60,13 +85,16 @@ function showQuestion() {
         if (scorePercentage < 50) {
             let phoneScreen = document.querySelector('.phone');
             phoneScreen.style.backgroundColor = "#f44336";
-            document.querySelector('.score').innerHTML = `Du fick ${score} av totalt ${questions.length} rätt. <br>Det är inte kanon.`
+            document.querySelector('.score').innerHTML = `Du fick ${score} av ${questions.length} rätt.`;
+            document.querySelector('.score-feedback').textContent = "Det är inte kanon det här."
         } else if (scorePercentage >= 50 && scorePercentage <= 75) {
             phoneScreen.style.backgroundColor = "orange";
-            document.querySelector('.score').innerHTML = `Du fick ${score} av totalt ${questions.length} rätt. <br>Det är inte dåligt. Men verkligen inte bra heller.`
+            document.querySelector('.score').innerHTML = `Du fick ${score} av ${questions.length} rätt.`;
+            document.querySelector('.score-feedback').innerHTML = `Det är inte dåligt... <br> men verkligen inte bra heller.`;
         } else {
             phoneScreen.style.backgroundColor = "#4caf50";
-            document.querySelector('.score').innerHTML = `Du fick ${score} av totalt ${questions.length} rätt. <br>Det här kan inte anses vara annat än succé!`
+            document.querySelector('.score').innerHTML = `Du fick ${score} av ${questions.length} rätt.`;
+            document.querySelector('.score-feedback').textContent = "Det är inte kanon det här."
         }
     }
 }

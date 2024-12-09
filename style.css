@@ -27,8 +27,8 @@ body.dark-mode .status-bar {
 
 .phone {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  text-align: center;
   width: 400px;
   height: 800px;
   background-color: #ffffff;
@@ -65,8 +65,15 @@ body.dark-mode .status-bar {
   height: 50%;
   padding: 15px;
 }
-.phone .top-and-bottom-screen-container .top-half {
-  background-color: inherit;
+.phone .top-and-bottom-screen-container .top-half .question-number-div,
+.phone .top-and-bottom-screen-container .top-half .score-box-div {
+  height: 50%;
+}
+.phone .top-and-bottom-screen-container .top-half .score {
+  display: none;
+  line-height: 5;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .phone .top-and-bottom-screen-container .bottom-half {
   display: flex;

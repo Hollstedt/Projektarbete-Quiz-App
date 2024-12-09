@@ -32,8 +32,8 @@ body {
 
 .phone {
     display: flex;
-    text-align: center;
     flex-direction: column;
+    text-align: center;
     width: 400px;
     height: 800px;
     background-color: $screen-color-light;
@@ -75,7 +75,21 @@ body {
         }
 
         .top-half {
-            background-color: inherit;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-around;
+
+            .question-number-div,
+            .score-box-div {
+                height: 50%;
+            }
+
+            .score {
+                display: none;
+                line-height: 5;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
         }
 
         .bottom-half {
