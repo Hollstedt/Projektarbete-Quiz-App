@@ -17,14 +17,30 @@ let questions = [
         answer: true
     },
     {
-        type: "multiple-choices",
-        text: "Är den här frågan sann?",
-        choices: ["Ja", "Nej", "Jag vet inte", "Kanske"],
-        answer: "Ja"
+        type: "true-false",
+        text: "Den här frågan är true",
+        answer: true
     },
+    {
+        type: "true-false",
+        text: "Den här frågan är true",
+        answer: true
+    },
+    // {
+    //     type: "multiple-choices",
+    //     text: "Är den här frågan sann?",
+    //     choices: ["Ja", "Nej", "Jag vet inte", "Kanske"],
+    //     answer: "Ja"
+    // },
     // {
     //     text: "Den här frågan är true",
     //     answer: true
+    // },
+    // {
+    //     type: "multiple-choices",
+    //     text: "Är den här frågan sann?",
+    //     choices: ["Ja", "Nej", "Jag vet inte", "Kanske"],
+    //     answer: "Ja"
     // },
     // {
     //     text: "Den här frågan är false",
@@ -77,12 +93,12 @@ function showQuestion() {
         document.querySelector('.question').textContent = questions[questionIndex].text;
 
         if (questions[questionIndex].type === "multiple-choices") {
-            document.querySelectorAll('.true-false-container').forEach(button => {
+            document.querySelectorAll('.true-false-btn').forEach(button => {
                 button.style.display = "none";
             });
-            document.querySelectorAll('.multiple-choices-container').forEach(button => {
-                button.style.display = "block";
-                console.log("hamnar jag här?");
+            document.querySelectorAll('.multipleChoices-btn').forEach(button => {
+                button.style.display = "flex";
+                console.log("är jag i multiple-choice?");
             });
         }
     } else {
@@ -91,8 +107,6 @@ function showQuestion() {
         document.querySelector('.question').textContent = "";
         document.querySelector('.bottom-half').style.display = "none";
         document.querySelector('.score').style.display = "block";
-        
-        console.log(scorePercentage);
 
         // conditional för output av score-procent
         if (scorePercentage < 50) {
@@ -107,7 +121,7 @@ function showQuestion() {
         } else {
             phoneScreen.style.backgroundColor = "#4caf50";
             document.querySelector('.score').innerHTML = `Du fick ${score} av ${questions.length} rätt.`;
-            document.querySelector('.score-feedback').textContent = "Det är inte kanon det här."
+            document.querySelector('.score-feedback').textContent = "Det här är utom denna värld."
         }
     }
 }
@@ -125,8 +139,8 @@ function checkAnswer(userInputAnswer) {
 }
 
 // anropar checkAnswer-funktionen och skickar argument beroende på knappval för sant/falskt
-document.querySelector('.true-btn').addEventListener('click', () => checkAnswer(true));
-document.querySelector('.false-btn').addEventListener('click', () => checkAnswer(false));
+document.querySelector('#true-btn').addEventListener('click', () => checkAnswer(true));
+document.querySelector('#false-btn').addEventListener('click', () => checkAnswer(false));
 
 
 showQuestion();

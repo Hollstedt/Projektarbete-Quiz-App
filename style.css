@@ -82,52 +82,57 @@ body.dark-mode .status-bar {
   flex-direction: column;
   background-color: inherit;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container {
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container button {
-  width: 70%;
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container button {
+  width: 80%;
   height: 50px;
   border-radius: 15px;
   border: none;
   color: #f5f5f5;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
   font-size: 1.3rem;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container .true-btn {
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #true-btn {
   background-color: #4caf50;
   margin-bottom: 15px;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container .true-btn:hover {
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #true-btn:hover {
   background-color: rgba(109, 153, 82, 0.7333333333);
+  transition: background-color 0.3s ease;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container .false-btn {
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #true-btn:active {
+  background-color: rgba(93, 153, 55, 0.7333333333);
+}
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #false-btn {
   background-color: #f44336;
 }
-.phone .top-and-bottom-screen-container .bottom-half .true-false-container .false-btn:hover {
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #false-btn:hover {
+  background-color: rgba(255, 68, 68, 0.7333333333);
+  transition: background-color 0.3s ease;
+}
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container #false-btn:active {
   background-color: rgba(255, 68, 68, 0.7333333333);
 }
-.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container .multipleChoices-btn {
+  display: none;
   justify-content: center;
   align-items: center;
-}
-.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container button {
-  display: none;
-  width: 70%;
-  height: 50px;
-  border-radius: 15px;
-  border: none;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  background-color: white;
   color: black;
-  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 1.2rem;
 }
-.phone .top-and-bottom-screen-container .bottom-half .multiple-choices-container button:hover {
-  background-color: #333;
+.phone .top-and-bottom-screen-container .bottom-half .answer-buttons-container .multipleChoices-btn:hover {
+  background-color: #cccccc;
+  transition: background-color 0.2s ease;
 }/*# sourceMappingURL=style.css.map */
