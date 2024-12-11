@@ -8,10 +8,17 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    <audio id="bad-sound" src="sound/sound-effects/trumpet-fail.mp3"></audio>
+    <audio id="great-sound" src="sound/sound-effects/wow.mp3"></audio>
+
+    <button class="music-button">🙉</button>
+    <audio id="menti-music">
+        <source src="sound/background-music/menti-music.mp3" type="audio/mpeg">
+    </audio>
     <div class="phone">
         <div class="status-bar">
             <div class="time"></div>
-            <button class="light-dark-mode"><img src="/icons/dark-mode.png" alt="picture of a moon, left side is white and right side is black"></button>
+            <button class="light-dark-mode"><img class="light-dark-mode-icon" src="/icons/dark-mode.png" alt="picture of a moon, left side is white and right side is black"></button>
         </div>
         <div class="top-and-bottom-screen-container">
             <div class="top-half">
@@ -26,14 +33,8 @@
             </div>
             <div class="bottom-half">
                 <div class="true-false-container">
-                    <button class="btn-layout true-btn">Sant</button>
-                    <button class="btn-layout false-btn">Falskt</button>
-                </div>
-                <div class="multiple-choices-container">
-                    <button class="btn-layout multipleChoices-btn" id="btn-three">Används ej</button>
-                    <button class="btn-layout multipleChoices-btn" id="btn-fours">Används ej</button>
-                    <button class="btn-layout multipleChoices-btn" id="btn-five">Används ej</button>
-                    <button class="btn-layout multipleChoices-btn" id="btn-six">Används ej</button>
+                    <button class="true-btn">Sant</button>
+                    <button class="false-btn">Falskt</button>
                 </div>
             </div>
         </div>

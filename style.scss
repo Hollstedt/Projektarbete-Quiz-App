@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 100vh;
     background-color: $background-light;
     font-family: Arial, sans-serif;
@@ -27,6 +28,26 @@ body {
             background-color: $status-bar-dark;
             color: $button-color-light;
         }
+    }
+}
+
+.music-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $music-button-background-color;
+    color: $button-color-light;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $music-button-background-color-hover;
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 }
 
@@ -71,14 +92,11 @@ body {
         .top-half,
         .bottom-half {
             height: 50%;
-            padding: 15px;
+            padding: 25px;
         }
 
         .top-half {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-around;
-
+            
             .question-number-div,
             .score-box-div {
                 height: 50%;
@@ -89,6 +107,10 @@ body {
                 line-height: 5;
                 font-size: 1.5rem;
                 font-weight: bold;
+            }
+
+            .question {
+                font-size: 1.4rem;
             }
         }
 
@@ -111,8 +133,9 @@ body {
                     height: 50px;
                     border-radius: 15px;
                     border: none;
-                    color: #f5f5f5;
+                    color: $button-text-color;
                     text-transform: uppercase;
+                    cursor: pointer;
                     font-weight: bold;
                     font-size: 1.3rem;
                 }
@@ -124,6 +147,10 @@ body {
                     &:hover {
                         background-color: $button-true-hover;
                     }
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
                 }
     
                 .false-btn {
@@ -132,27 +159,9 @@ body {
                     &:hover {
                         background-color: $button-false-hover;
                     }
-                }
-            }
 
-            .multiple-choices-container {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                
-                button {
-                    display: none;
-                    width: 70%;
-                    height: 50px;
-                    border-radius: 15px;
-                    border: none;
-                    color: black;
-                    margin-bottom: 5px;
-
-                    &:hover {
-                        background-color: #333;
+                    &:active {
+                        transform: scale(0.95);
                     }
                 }
             }
