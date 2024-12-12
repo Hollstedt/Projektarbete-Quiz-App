@@ -84,6 +84,7 @@ document.querySelector('.max-questions').textContent = questions.length;
 
 // kollar om det finns frågor att visa och ändrar DOM baserat på conditional
 function showQuestion() {
+    console.log("Här är jag i showQuestion");
     let phoneScreen = document.querySelector('.phone');
     let scorePercentage = (score / questions.length) * 100;
 
@@ -128,9 +129,12 @@ function showQuestion() {
 
 // tar in svaret med argument från eventlistener och om det stämmer överens med svaret i objektet för indexet så score++, annars inget just nu
 function checkAnswer(userInputAnswer) {
+    let correctAnswersArray = [];
     if (userInputAnswer === questions[questionIndex].answer) {
         console.log("Rätt svar! nu är du i if på checkAnswer");
         score++;
+        correctAnswersArray.push(userInputAnswer);
+        console.log();
     } else {
         console.log("Fel svar! nu är du i else på checkAnswer");
     }
